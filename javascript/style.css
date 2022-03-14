@@ -1,0 +1,8 @@
+.externalstyling{
+    text-align: center;
+}
+#divid{
+    border: solid 1px blue;
+    margin: auto;
+    width: 80%;
+}

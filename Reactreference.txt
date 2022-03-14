@@ -1,0 +1,151 @@
+Web Dev Simplified
+
+https://www.youtube.com/watch?v=O6P86uwfdR0
+
+Points to remember:
+useState returns an array
+
+For example
+
+const [array]=useState()
+
+const [count,setCount]=useState()
+
+array contains two values 
+first is the state and second is the setState function
+it is not good to set the counter directly
+for example
+setCount(count=count-1)
+if we use the same function two times
+setCount(count=count-1)
+setCount(count=count-1)
+
+then you do not get cumulative counts
+hence use
+setCount(count=>count-1)
+like a function
+
+you can have a function inside a useState
+const [time,setTime]=useState(()=>{console.log('run function'); return 10;})
+
+it would be called only once..
+However if the function is outside .. it would be called every time
+the component renders
+
+const initializeTime=()=>{
+    console.log('run function'); 
+    return 10;
+  }
+
+const [time,setTime]=useState(initializeTime())
+
+Object
+
+function displayObjectProp(){
+    setState(previous=> {
+      return {color:previous.color + 'green'}
+    })
+  }
+
+const [state,setState]=useState({color:'red',font:'arial'});
+  const color = state.color;
+  const font=state.font;
+
+destructuring to be used otherwise another property would be overwritten
+function displayObjectProp(){
+      setState(previous=> {
+        return {...previous,color:previous.color + 'green'}
+      })
+    }
+
+
+1.useeffect is called every time there is an action in the component
+
+useEffect(()=>{
+        console.log('render');
+    })
+
+2.called only once on load of the component
+
+    useEffect(()=>{
+        console.log('render');
+    },[])
+
+3. useRef
+Avoids re-render of useState inside UseEffect()
+
+used to persists between renders of component
+ref does not  component to 
+reupdate when it gets changed
+
+rafce
+
+---json server---
+
+Step 1 :Setting up json server
+https://github.com/typicode/json-server
+
+npm install -g json-server
+create a db.json
+with json data
+start json server
+json-server --watch db.json
+goto http://localhost:3000/posts/
+
+1. create server-api folder
+2. open terminal 
+npm init
+npm i --save json-server
+create a file db.json
+create contact json object
+{
+    "contacts":[
+        {
+            "id":"1",
+            "name":"Raghu",
+            "email":"prasadraghuks@gmail.com"
+        },
+        {
+            "id":"2",
+            "name":"Rekha",
+            "email":"rekha@gmail.com"
+        }
+    ]
+}
+
+modify package.json
+"scripts": {
+    "start": "json-server -p 3006 -w db.json"
+  }
+
+npm start
+
+Validations:
+https://www.youtube.com/watch?v=brcHK3P6ChQ&list=PL0Zuz27SZ-6PRCpm9clX0WiBEMB70FWwd
+https://github.com/gitdagray/react_register_form
+
+Java Script validation
+https://codepen.io/WebDevSimplified/pen/pmMOEy
+
+https://www.youtube.com/watch?v=rhzKDrUiJVk
+https://regexr.com/
+Regular expression
+https://www.w3schools.com/jsref/jsref_regexp_test.asp
+Routes:
+npm install --save react-router-dom
+https://www.youtube.com/watch?v=zEQiNFAwDGo
+
+https://www.w3schools.com/jsref/jsref_regexp_test.asp
+
+Lifecycle
+https://stackblitz.com/edit/react-life-cycle?file=index.js
+
+
+
+
+
+
+
+
+
+

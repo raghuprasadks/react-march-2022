@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    <h1>Arrow Function</h1>
+    <script>
+        // Regular function
+        console.log('Regular function - Type 1')
+        function Greet(){
+            console.log('Welcome to regular function 1')
+        }
+        Greet();
+        console.log('Regular function - Type 2 without name')
+        let greet = function (){
+            console.log('Welcome to regular function 2')
+        }
+        greet();
+        console.log('arrow function with out parameter')
+        let greetaf =()=>{
+            console.log('greeting arrow function without parameter')
+        }
+        greetaf()
+        console.log('arrow function with parameter')
+        
+        let greetafwp =(name)=>{
+            console.log('greeting arrow function with parameter name '+name)
+        }
+        greetafwp('rajesh')
+        console.log('regular function with return type')        
+        let add = function (n1,n2){
+            return n1+n2
+        }
+        total = add(100,200)
+        console.log('total '+total);
+        console.log('arrow function with return type')
+
+        let addaf=(n1,n2)=>n1+n2
+        total = addaf(100,200)
+        console.log('total '+total);
+        
+        let si = (p,r,t)=>(p*r*t)/100
+
+        interest = si(1000,4,1)
+        console.log('si using arrow function '+interest)
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+Agenda:
+CRUD Operation in java Script
+
+Assignment CRUD-
+Update and search functionality in employee master
+Arrow Functions
+
+Assignment Arrow functions - 
+Write an arrow function to calculate simpleInterest
+by passing p,r,t
+
+class
+
+Spread and Rest operators
+AJAX
+FetchAPI
+JSON
+Bootstrap
+
+React
+1.Pre-requisites : Node.js
+2. npx create-react-app <appname>
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    <h1>Scope - var,let,const</h1>
+    <script>
+        // var - global scope
+        var age=10;
+        let letvar=22
+        console.log('value of age ',age)
+        // let and const - block level scope
+        {
+            const pi=3.143
+            console.log('value of const pi ',pi)
+          //  pi="three.onefourthree" - cannot change a const varible
+            let pinew = 3.143
+            console.log('value of let pinew ',pinew)
+            pinew = "three.onefourthree"
+            console.log('value of let pinew changed ',pinew)
+            console.log('letvar ',letvar)     
+        }
+        console.log('value of const pi outside block ',pi)
+        console.log('value of let pinew outside block ',pinew)
+    </script>
+</body>
+</html>

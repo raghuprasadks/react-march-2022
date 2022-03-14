@@ -1,0 +1,23 @@
+Agenda:
+CRUD applications
+hooks
+useState
+useRef
+useEffect
+
+interface with REST api's
+Bootstrap
+
+https://stackblitz.com/edit/simple-react-crud
+
+http://jsonplaceholder.typicode.com/
+
+Get all data
+http://jsonplaceholder.typicode.com/todos
+get id 1
+https://jsonplaceholder.typicode.com/todos/1
+post /put/delete
+http://jsonplaceholder.typicode.com/todos
+
+https://www.w3schools.com/bootstrap4/
+

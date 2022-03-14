@@ -1,0 +1,25 @@
+Agenda:
+Fullstack web application development
+Languages,libraries,framework
+
+Web Application development
+HTML/CSS/Java Script
+
+1. Create a Registration Page
+
+Name : <text box>
+Mobile : <text box>
+Email : <text box>
+Sex : Male, Female,Others (radio button>
+Qualification : UG,PG,Others (check box>
+Location : Bengaluru,Mysore,- drop down
+<submit>
+
+2. Apply CSS to registration page
+Demonstate the usage
+of inline,internal and external style sheet
+ip - \\172.23.146.142
+
+3. Assignment
+Convert miles to km using html/css/javascript
+Calculate electricity bill

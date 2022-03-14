@@ -1,0 +1,10 @@
+Agenda:
+1. Bootstrap - done
+2. CRUD
+npm install
+3. Axios -REST API -Validation-Regex 
+4. Routes
+5. hooks
+6. Class component - lifecycle methods
+
+9845547471 - raghu prasad ks

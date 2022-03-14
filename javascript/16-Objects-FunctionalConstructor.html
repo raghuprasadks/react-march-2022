@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Functional Constuctor</h1>
+    <script>
+        function employee(code,name,dept,sal){
+            this.code = code;
+            this.name = name;
+            this.dept = dept;
+            this.sal = sal;
+            this.displaySalary = function(){
+                return this.sal;
+            };
+            this.info = function(){
+                console.log('inside info');
+                return "Code : "+this.code," Name :"+this.name+" Dept "+this.dept;
+            };
+        }
+        emp1 = new employee(1,'Gagan','IT',35000);
+        emp2 = new employee(2,'Rekha','Accounts',40000)
+        emp3 = new employee(3,'Akash','Admin',50000)
+        employees = []
+        employees.push(emp1)
+        employees.push(emp2)
+        employees.push(emp3)
+        for (let i=0;i<employees.length;i++){
+            emp = employees[i];
+            console.log('employee ',emp);
+            info = emp.info()
+            console.log(info);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    <h1>Destructuring</h1>
+    <script>
+        cars = ['Ertiga','Thor','BMW']
+        let [suv,jeep,laxury]=cars
+        console.log('suv :'+suv +' jeep '+jeep + ' laxury '+laxury)
+
+        function calculate(a, b) {
+            const add = a + b;
+            const subtract = a - b;
+            const multiply = a * b;
+            const divide = a / b;
+
+            return [add, subtract, multiply, divide];
+}
+    const [add, subtract, multiply, divide] = calculate(4, 7);
+    console.log('add '+add)
+
+    const vehicleOne = {
+  brand: 'Ford',
+  model: 'Mustang',
+  type: 'car',
+  year: 2021, 
+  color: 'red'
+}
+
+msg = myVehicle(vehicleOne);
+console.log('msg '+msg)
+function myVehicle({type, color, brand, model}) {
+  const message = 'My ' + type + ' is a ' + color + ' ' + brand + ' ' + model + '.';
+    return message
+}
+
+
+const vehicleTwo = {
+  brand: 'Ford',
+  model: 'Mustang',
+  type: 'car',
+  year: 2021, 
+  color: 'red',
+  registration: {
+    city: 'Houston',
+    state: 'Texas',
+    country: 'USA'
+  }
+}
+
+myVehicleTwo(vehicleTwo)
+
+function myVehicleTwo({ model, registration:{state} }) {
+  const message = 'My ' + model + ' is registered in ' + state + '.';
+    console.log('mesage : myvehicle '+message)
+}
+    </script>
+    
+</body>
+</html>

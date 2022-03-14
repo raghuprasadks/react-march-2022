@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher Order Functions</title>
+</head>
+<body>
+    <h1>Arrow functions - Higher Order</h1>
+
+<script>
+    console.log('regular function for map')
+
+    fruits = ['Apple','Banana','Guava','Mango']
+
+    function mapDemo(value){
+        console.log("value "+value)
+    }
+    fruits.map(mapDemo)
+    console.log('arrow function for map')
+    fruits.map((fruit)=>console.log('fruit '+fruit))
+
+    runs = [20,30,50,55,100]
+    // write a regular/arrow function using filter to display runs >=50
+
+    console.log('arrow function with filter')
+    
+    let fiftyNAbove=runs.filter((run)=>run>=50)
+    console.log(fiftyNAbove)
+
+    let ispresent = runs.find((r)=>r==50)
+    console.log('is fifty present '+ispresent)
+
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object - Employee</h1>
+    <script>
+        const employee={
+            code:1,
+            name:'ravi',
+            dept:'IT',
+            sal:30000,
+            displayDept:function (){
+                return this.dept;
+            }            
+        }
+        console.log("Employee ",employee)
+        console.log("Employee:name ",employee.name)
+        console.log("Employee:Department ",employee.displayDept())
+        const employees=[
+            {
+                code:1,
+                name:'ravi',
+                dept:'IT',
+                sal:30000
+            },
+            {
+                code:2,
+                name:'ramya',
+                dept:'IT',
+                sal:30000
+            }
+    ]
+    console.log('Employee name : 2nd ',employees[1].name)
+    </script>
+</body>
+</html>
