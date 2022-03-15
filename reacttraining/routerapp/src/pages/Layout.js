@@ -3,6 +3,7 @@ import { Outlet, Link } from "react-router-dom";
 const Layout = () => {
   return (
     <>
+    {console.log('layout')}
       <nav>
         <ul>
           <li>

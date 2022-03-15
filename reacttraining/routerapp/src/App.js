@@ -1,25 +1,50 @@
-import { BrowserRouter,Route,Routes } from 'react-router-dom';
-import Layout from './pages/Layout'
-import Home from './pages/Home'
-import Blogs from './pages/Blogs'
-import Contact from './pages/Contact'
-import NoPage from './pages/NoPage'
+import { useState,useMemo } from "react";
+import ReactDOM from "react-dom";
 
-function App() {
+const App = () => {
+  const [count, setCount] = useState(0);
+  const [todos, setTodos] = useState([]);
+  //const calculation = expensiveCalculation(count);
+  const calculation = useMemo(() => expensiveCalculation(count), [count]);
+  const [temp,setTemp]=useState('render')
+
+  const increment = () => {
+    setCount((c) => c + 1);
+    setTemp('render-increment')
+  };
+  const addTodo = () => {
+    setTodos((t) => [...t, "New Todo"]);
+    setTemp('render-addto')
+  };
+
   return (
-    <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Layout/>}>
-        <Route index element={<Home/>}/>
-        <Route path="blogs" element={<Blogs/>}/>
-        <Route path="contact" element={<Contact/>}/>
-        <Route path="*" element={<NoPage/>}/>
-      </Route>
-    </Routes>
-    
-    </BrowserRouter>
-    
+    <div>
+      
+      <div>
+        <h1>{temp}</h1>
+        <h2>My Todos</h2>
+        {todos.map((todo, index) => {
+          return <p key={index}>{todo}</p>;
+        })}
+        <button onClick={addTodo}>Add Todo</button>
+      </div>
+      <hr />
+      <div>
+        Count: {count}
+        <button onClick={increment}>+</button>
+        <h2>Expensive Calculation</h2>
+        {calculation}
+      </div>
+    </div>
   );
-}
+};
+
+const expensiveCalculation = (num) => {
+  console.log("Calculating...");
+  for (let i = 0; i < 1000000000; i++) {
+    num += 1;
+  }
+  return num;
+};
 
 export default App;

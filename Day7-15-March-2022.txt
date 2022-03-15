@@ -1,0 +1,12 @@
+Agenda:
+1. Axios -REST API -Validation-Regex 
+
+https://regexr.com/
+2. Routes
+npm install --save react-router-dom
+3. Class component - lifecycle methods
+https://www.w3schools.com/react/react_lifecycle.asp
+4. Custom hooks
+5. Interface React with .Net web api
+https://www.youtube.com/watch?v=Ocrbt4A_sgY
+6. Test

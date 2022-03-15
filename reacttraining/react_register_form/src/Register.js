@@ -26,15 +26,20 @@ const Register = () => {
     const [errMsg, setErrMsg] = useState('');
     const [success, setSuccess] = useState(false);
 
+    
     useEffect(() => {
+        console.log('useEffect: only once')
         userRef.current.focus();
     }, [])
-
+ 
     useEffect(() => {
+        console.log('useEffect: every time user changes')
         setValidName(USER_REGEX.test(user));
     }, [user])
 
     useEffect(() => {
+        console.log('useEffect: any changes in password or confirm password')
+        
         setValidPwd(PWD_REGEX.test(pwd));
         setValidMatch(pwd === matchPwd);
     }, [pwd, matchPwd])

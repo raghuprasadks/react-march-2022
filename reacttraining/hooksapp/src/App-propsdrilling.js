@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-      <h1>{`Hello ${user}!`}</h1>
+      <h1>{`Hello props drilling ${user}!`}</h1>
       <Component2 user={user} />
     </>
   );
@@ -43,7 +43,7 @@ function Component5({ user }) {
   return (
     <>
       <h1>Component 5</h1>
-      <h2>{`Hello ${user} again!`}</h2>
+      <h2>{`Hello props drilling ${user} again!`}</h2>
     </>
   );
 }

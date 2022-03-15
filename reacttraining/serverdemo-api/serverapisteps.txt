@@ -1,0 +1,26 @@
+create a folder serverdemo-api
+cd serverdemo-api
+npm init
+npm install --save json-server
+create a file called db.json
+
+{
+  "register": [
+    {
+      "id": 0,
+      "user": " ",
+      "pwd": ""
+    }
+  ]
+}
+
+update package.json
+
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "json-server -p 3007 -w db.json"  
+
+  }
+
+to run server
+npm start
